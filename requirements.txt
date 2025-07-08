@@ -1,0 +1,13 @@
+# Backend & Frontend Frameworks
+fastapi
+uvicorn[standard]
+dash
+dash-bootstrap-components
+requests
+
+# Data & Optimization
+pandas
+numpy
+scipy
+yfinance
+pyportfolioopt
