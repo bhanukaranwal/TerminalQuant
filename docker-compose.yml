@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # Backend API Service
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    container_name: terminalquant-api
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  # Frontend Dashboard Service
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    container_name: terminalquant-dashboard
+    command: python src/dashboard/app.py
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8050:8050"
+    depends_on:
+      - backend # This ensures the backend starts before the frontend
+    restart: unless-stopped
