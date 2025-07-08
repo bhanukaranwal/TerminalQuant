@@ -1,0 +1,68 @@
+/* Import the IBM Plex Mono font */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap');
+
+body {
+    background-color: #000000;
+    color: #d3d3d3; /* Light grey text */
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #00ff00; /* Neon green for headers */
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* --- Input Components --- */
+.form-control, .form-select, .Select-control {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+}
+.Select-value-label, .Select-placeholder { color: #fff !important; }
+.Select--single > .Select-control .Select-value, .Select-input { color: #fff !important; }
+.Select-menu-outer { background-color: #1a1a1a !important; }
+.Select-option { color: #fff !important; background-color: #1a1a1a !important; }
+.Select-option.is-focused { background-color: #00ff00 !important; color: #000 !important; }
+
+
+.form-control:focus, .form-select:focus {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border-color: #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+/* --- Button Styling --- */
+.btn-primary {
+    background-color: #00ff00;
+    border-color: #00ff00;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.btn-primary:hover {
+    background-color: #00cc00;
+    border-color: #00cc00;
+}
+
+/* --- Card and Widget Styling --- */
+.card {
+    background-color: #0d0d0d;
+    border: 1px solid #222222;
+    border-radius: 0;
+    height: 100%;
+}
+
+.card-header {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333333;
+    color: #ffff00; /* Neon yellow for card headers */
+}
+
+/* --- Alerts --- */
+.alert-warning { background-color: #332b00; border-color: #ffff00; color: #ffff00; }
+.alert-danger { background-color: #330000; border-color: #ff0000; color: #ff0000; }
